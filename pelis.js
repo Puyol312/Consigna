@@ -9,7 +9,7 @@ function conseguirDatos(){
 //Funcion que recibe un paremtro y un array de objetos, devuelve un nuevo array ordenado segun el 
 // parametro, alfabeticamente o de mayor a menor.
 function sort(argumentoN, datos){
-    const nuevoDato = [];
+    let nuevoDato = [];
     const argumento = argumentoN.toLowerCase();
     if (argumento == 'titulo'){
         nuevoDato = [...datos].sort((a, b) => a.title.localeCompare(b.title));
