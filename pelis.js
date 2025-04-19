@@ -11,7 +11,7 @@ function conseguirDatos(){
 function sort(argumentoN, datos){
     let nuevoDato = [];
     const argumento = argumentoN.toLowerCase();
-    if (argumento == 'titulo'){
+    if (argumento == 'title'){
         nuevoDato = [...datos].sort((a, b) => a.title.localeCompare(b.title));
     }else if(argumento =='rating'){
         nuevoDato = [...datos].sort((a, b) => b.rating - a.rating);
@@ -30,7 +30,7 @@ function search(parametro, datos){
 //Devuelve aquellas peliculas en tengan en su campo tag el 'parametro', sin importar como lo 
 //haya escrito el usuario.
 function tag(parametro, datos){
-    return datos.filter(obj => obj.tags?.includes(parametro.toLowerCase()));
+    return datos.filter(obj => obj.tags.map(t => t.toLowerCase()).includes(parametro.toLowerCase()));
 }
 
 module.exports = {conseguirDatos, sort, search, tag};
