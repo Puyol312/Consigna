@@ -28,6 +28,5 @@ function main(){
             }
         }
     }
-    console.log('Fin');
 }
 main();
